@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f1eb">
+<meta name="description" content="Поддержи IgnatovaHub — на поддержку блога и новые проекты.">
+<title>Поддержать — ignatova.hub</title>
+<style>
+:root{--bg:#f6f1eb;--ink:#201d1a;--muted:#77716b;--paper:#fffdfa;--line:#e7ded5;--accent:#dce75b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;padding:26px 0;border-bottom:1px solid var(--line)}
+.logo{font-size:19px;font-weight:800;letter-spacing:-.04em;text-decoration:none}
+nav{display:flex;gap:28px;font-size:13px;color:#5f5953}
+nav a{text-decoration:none}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;padding:48px 0 72px}
+.kicker{font-size:11px;letter-spacing:.18em;color:var(--muted);font-weight:700}
+h1{font-size:clamp(48px,6.5vw,82px);line-height:.98;letter-spacing:-.065em;margin:20px 0}
+.intro{font-size:17px;line-height:1.65;max-width:440px;color:#5c5650}
+.thanks{font-family:Georgia,serif;font-style:italic;font-size:25px;margin-top:22px}
+.hero-photo{height:480px;position:relative;overflow:hidden;border-radius:5px;background:linear-gradient(135deg,#f4c5d7,#e8a5c5 55%,#b56e98)}
+.hero-photo img{width:100%;height:100%;display:block;object-fit:cover}
+.photo-note{position:absolute;inset:auto 12px 12px;background:#fffdfacc;padding:8px 10px;font-size:11px;color:#5c5650}
+.section-title{font-size:clamp(32px,4vw,46px);letter-spacing:-.05em;margin:0 0 8px}
+.section-sub{color:var(--muted);margin:0 0 28px}
+.payments{padding:44px 0 66px;border-top:1px solid var(--line)}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--paper);border:1px solid var(--line);padding:28px;border-radius:8px;min-height:320px}
+.bank-brand{display:flex;align-items:center;gap:10px;font-weight:750;font-size:17px;margin-bottom:26px}
+.bank-mark{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#f3c84a 0 42%,#2777bb 43%);border:3px solid #fff;box-shadow:0 0 0 1px #ded6ce}
+.panel h3{font-size:21px;margin:0 0 8px;letter-spacing:-.03em}
+.panel p{color:var(--muted);font-size:14px}
+.bank-card{margin:20px 0 16px;max-width:380px;min-height:190px;border-radius:14px;padding:22px;color:white;background:linear-gradient(135deg,#1b5d90,#174a76 58%,#d6b64a);box-shadow:0 12px 24px #193d5520;display:flex;flex-direction:column;justify-content:space-between}
+.bank-card-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.04em}
+.chip{width:35px;height:26px;border-radius:5px;background:linear-gradient(135deg,#e7d9a2,#a9a078);border:1px solid #fff8}
+.card-number{font-size:clamp(16px,2vw,21px);letter-spacing:.08em;white-space:nowrap}
+.card-bottom{display:flex;justify-content:space-between;gap:12px;font-size:11px;text-transform:uppercase}
+.card-bottom strong{display:block;font-size:13px;letter-spacing:.08em;margin-top:3px}
+.copy-number{font-size:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.copy-number code{font:600 14px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.03em}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:4px;background:var(--ink);color:white;padding:13px 18px;text-decoration:none;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.btn:hover{opacity:.88}
+.paypal-logo{font-size:34px;font-weight:800;font-style:italic;color:#123b72;letter-spacing:-.08em;margin-bottom:24px}
+.paypal-logo span{color:#1688c9}
+.email{font-size:14px;color:var(--muted);overflow-wrap:anywhere}
+.paypal-button-wrap{margin-top:22px;min-height:48px}
+#paypal-container-5MY33NP46X57Y{max-width:320px}
+.social-section{border-top:1px solid var(--line);padding:36px 0 26px}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.social{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);padding:17px 14px;text-decoration:none;border-radius:5px;min-width:0}
+.social svg{width:25px;height:25px;flex:none}
+.social strong{display:block;font-size:14px}
+.social small{display:block;font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+footer{padding:24px 0 34px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:760px){.wrap{width:min(100% - 30px,560px)}nav{gap:12px}.hero{grid-template-columns:1fr;gap:28px;padding:36px 0 48px}.hero-photo{height:360px;grid-row:1}.payment-grid{grid-template-columns:1fr}.panel{padding:22px}.socials{grid-template-columns:1fr 1fr}h1{font-size:58px}}
+@media(max-width:430px){header{align-items:flex-start;gap:10px}nav{font-size:11px;gap:9px;padding-top:5px}.hero-photo{height:300px}.social{padding:12px 9px;gap:8px}.social small{font-size:10px}.card-number{font-size:15px}}
+</style>
+<script src="https://www.paypal.com/sdk/js?client-id=BAADOyO9zKHHRmnKco41ydH2cL1HdECl1YxJGu2ks2oFWQWKZ5lfFSfOASs0w19s2Hk7jeGM6zxTmSai1Q&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="logo" href="#">ignatova.hub</a>
+<nav><a href="#support">Поддержать</a><a href="#about">Контент</a><a href="#socials">Соцсети</a></nav>
+</header>
+<main>
+<section class="hero" id="about">
+<div>
+<div class="kicker">МОТОЦИКЛЫ / АВТО / ПУТЕШЕСТВИЯ</div>
+<h1>Поддержи<br>мой блог.</h1>
+<p class="intro">Твой донат помогает снимать больше крутого контента, развивать канал и делать ещё больше интересных проектов.</p>
+<div class="thanks">Спасибо! ♡</div>
+</div>
+<div class="hero-photo">
+<img src="hero-pink.jpg" alt="Главное фото IgnatovaHub — девушка на розовом фоне" onerror="this.style.display='none';document.getElementById('photo-note').style.display='block'">
+<div class="photo-note" id="photo-note"><b>hero-pink.jpg</b>.</div>
+</div>
+</section>
+<section class="payments" id="support">
+<h2 class="section-title">Как поддержать?</h2>
+<p class="section-sub">На поддержку блога и новые проекты. Спасибо за твою поддержку!</p>
+<div class="payment-grid">
+<div class="panel">
+<div class="bank-brand"><span class="bank-mark"></span> Moldindconbank</div>
+<h3>Перевод на карту</h3>
+<p>Международная карта Mastercard</p>
+<div class="bank-card">
+<div class="bank-card-top"><span>MASTERCARD</span><span class="chip"></span></div>
+<div class="card-number">5574 8402 8837 9252</div>
+<div class="card-bottom"><div>Cardholder<strong>I.E.</strong></div><div>Valid thru<strong>10/26</strong></div><div style="font-weight:800;font-size:13px">mastercard</div></div>
+</div>
+<div class="copy-number"><span>Номер карты:</span><code id="cardnumber">5574840288379252</code><button class="btn" type="button" onclick="navigator.clipboard.writeText('5574840288379252').then(()=>this.textContent='Скопировано')">Копировать</button></div>
+<p style="font-size:11px;margin-top:14px">При переводе возможны комиссии и конвертация со стороны банков.</p>
+</div>
+<div class="panel">
+<div class="paypal-logo">Pay<span>Pal</span></div>
+<h3>Поддержать через PayPal</h3>
+<p>Если тебе удобнее отправить поддержку через PayPal, воспользуйся кнопкой ниже.</p>
+<div class="email">Почта: <a href="mailto:ignatovahub@gmail.com">ignatovahub@gmail.com</a></div>
+<div class="paypal-button-wrap"><div id="paypal-container-5MY33NP46X57Y"></div></div>
+<p style="font-size:11px">Если кнопка не отображается, проверь подключение PayPal Hosted Button в своём аккаунте.</p>
+</div>
+</div>
+</section>
+<section class="social-section" id="socials">
+<h2 class="section-title">Мои соцсети</h2>
+<p class="section-sub">Подписывайся, чтобы не пропустить новые видео и истории.</p>
+<div class="socials">
+<a class="social" href="https://www.tiktok.com/@ignatova.hub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 7.1a6.8 6.8 0 0 1-4.1-1.4v8.1a6.2 6.2 0 1 1-5.4-6.1v3.3a2.9 2.9 0 1 0 2.1 2.8V2.5h3.3a6.6 6.6 0 0 0 4.1 4.1z"/></svg><span><strong>TikTok</strong><small>@ignatova.hub</small></span></a>
+<a class="social" href="https://www.instagram.com/ignatova.hub/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span><strong>Instagram</strong><small>@ignatova.hub</small></span></a>
+<a class="social" href="https://t.me/ignatova_hub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.7 3.4 18.5 20c-.2 1.2-.9 1.5-1.9.9l-5.3-3.9-2.6 2.5c-.3.3-.6.6-1.2.6l.4-5.4 9.8-8.9c.4-.4-.1-.6-.6-.2L5 13.2.1 11.7c-1.1-.4-1.1-1.1.2-1.6L19.5 2.7c.9-.3 1.8.2 2.2.7z"/></svg><span><strong>Telegram</strong><small>@ignatova_hub</small></span></a>
+<a class="social" href="https://www.youtube.com/@ignatovahub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg><span><strong>YouTube</strong><small>@ignatovahub</small></span></a>
+</div>
+</section>
+</main>
+<footer>Спасибо, что поддерживаешь ignatova.hub ♡</footer>
+</div>
+<script>
+if (window.paypal && paypal.HostedButtons) {
+  paypal.HostedButtons({ hostedButtonId: "5MY33NP46X57Y" }).render("#paypal-container-5MY33NP46X57Y");
+}
+</script>
+</body>
+</html>
