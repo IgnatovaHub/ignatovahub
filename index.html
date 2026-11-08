@@ -34,7 +34,7 @@ h1{font-size:clamp(48px,6.5vw,82px);line-height:.98;letter-spacing:-.065em;margi
 .bank-mark{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#f3c84a 0 42%,#2777bb 43%);border:3px solid #fff;box-shadow:0 0 0 1px #ded6ce}
 .panel h3{font-size:21px;margin:0 0 8px;letter-spacing:-.03em}
 .panel p{color:var(--muted);font-size:14px}
-.bank-card{margin:20px 0 16px;max-width:380px;min-height:190px;border-radius:14px;padding:22px;color:white;background:linear-gradient(135deg,#00a651,#007a3d 62%,#00552b);box-shadow:0 12px 24px #00a65138;display:flex;flex-direction:column;justify-content:space-between}
+.bank-card{margin:20px 0 16px;max-width:380px;min-height:190px;border-radius:14px;padding:22px;color:white;background:linear-gradient(135deg,#26A69A,#26A69A 60%,#1d8479);box-shadow:0 12px 24px #26A69A40;display:flex;flex-direction:column;justify-content:space-between}
 .bank-card-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.04em}
 .chip{width:35px;height:26px;border-radius:5px;background:linear-gradient(135deg,#e7d9a2,#a9a078);border:1px solid #fff8}
 .card-number{font-size:clamp(16px,2vw,21px);letter-spacing:.08em;white-space:nowrap}
@@ -71,6 +71,10 @@ footer{padding:24px 0 34px;text-align:center;color:var(--muted);font-size:12px}
 .nav-logos{align-items:center}.nav-logos a{display:inline-flex;align-items:center}.nav-logos a:hover{opacity:.8}
 .maib-mark{width:30px;height:30px;flex:none}
 #card,#crypto,#paypal{scroll-margin-top:20px}
+.to-top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border:0;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 16px #0003;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:9}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{opacity:.88}
+.to-top svg{width:22px;height:22px}
 @media(max-width:760px){.wrap{width:min(100% - 30px,560px)}nav{gap:12px}.hero{grid-template-columns:1fr;gap:28px;padding:36px 0 48px}.hero-photo{height:360px;grid-row:1}.payment-grid{grid-template-columns:1fr}.panel{padding:22px}.socials{grid-template-columns:1fr 1fr}h1{font-size:58px}}
 @media(max-width:430px){header{align-items:flex-start;gap:10px}nav{font-size:11px;gap:9px;padding-top:5px}.hero-photo{height:300px}.social{padding:12px 9px;gap:8px}.social small{font-size:10px}.card-number{font-size:15px}}
 </style>
@@ -80,7 +84,7 @@ footer{padding:24px 0 34px;text-align:center;color:var(--muted);font-size:12px}
 <div class="wrap">
 <header>
 <a class="logo" href="#">ignatova.hub</a>
-<nav class="nav-logos"><a href="#card" aria-label="Перевод на карту maib"><img src="maib-logo.svg" alt="maib" width="30" height="30" style="width:30px;height:30px;object-fit:contain;border-radius:7px;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg style="display:none" viewBox="0 0 74 28" height="26" role="img" aria-label="maib"><g transform="scale(.875)"><circle cx="16" cy="16" r="16" fill="#00a651"/><path d="M11 7.5 25.5 16 11 24.5z" fill="#fff"/></g><text x="33" y="20" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="800" fill="#00a651" letter-spacing="-.5">maib</text></svg></a><a href="#crypto" aria-label="Криптовалюта"><svg viewBox="0 0 32 32" height="26" role="img" aria-label="Bitcoin"><circle cx="16" cy="16" r="16" fill="#f7931a"/><path fill="#fff" d="M22.5 14c.3-2.1-1.3-3.2-3.5-4l.7-2.8-1.7-.4-.7 2.7-1.4-.3.7-2.7-1.7-.4-.7 2.8-1.1-.3-2.3-.6-.5 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.3.2.1-.2 0-1.2 4.6c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.6 1.2.3-.7 2.8 1.7.4.7-2.8 1.4.4-.7 2.8 1.7.4.7-2.8c2.9.5 5.1.3 6-2.3.7-2.1 0-3.3-1.5-4.1 1.1-.3 1.9-1 2.1-2.5zm-3.9 5.4c-.5 2.1-4.1 1-5.2.7l.9-3.7c1.2.3 4.8.9 4.3 3zm.5-5.4c-.5 1.9-3.4.9-4.4.7l.8-3.4c1 .2 4 .7 3.6 2.7z"/></svg></a><a href="#paypal" aria-label="PayPal"><svg viewBox="0 0 70 24" height="22" role="img" aria-label="PayPal"><text x="0" y="19" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="800" font-style="italic" letter-spacing="-1.4"><tspan fill="#123b72">Pay</tspan><tspan fill="#1688c9">Pal</tspan></text></svg></a></nav>
+<nav class="nav-logos"><a href="#card" aria-label="Перевод на карту maib"><img src="maib-logo.svg" alt="maib" height="46" style="height:46px;width:auto;max-width:170px;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg style="display:none" viewBox="0 0 74 28" height="26" role="img" aria-label="maib"><g transform="scale(.875)"><circle cx="16" cy="16" r="16" fill="#00a651"/><path d="M11 7.5 25.5 16 11 24.5z" fill="#fff"/></g><text x="33" y="20" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="800" fill="#00a651" letter-spacing="-.5">maib</text></svg></a><a href="#crypto" aria-label="Криптовалюта"><svg viewBox="0 0 32 32" height="26" role="img" aria-label="Bitcoin"><circle cx="16" cy="16" r="16" fill="#f7931a"/><path fill="#fff" d="M22.5 14c.3-2.1-1.3-3.2-3.5-4l.7-2.8-1.7-.4-.7 2.7-1.4-.3.7-2.7-1.7-.4-.7 2.8-1.1-.3-2.3-.6-.5 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.3.2.1-.2 0-1.2 4.6c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.6 1.2.3-.7 2.8 1.7.4.7-2.8 1.4.4-.7 2.8 1.7.4.7-2.8c2.9.5 5.1.3 6-2.3.7-2.1 0-3.3-1.5-4.1 1.1-.3 1.9-1 2.1-2.5zm-3.9 5.4c-.5 2.1-4.1 1-5.2.7l.9-3.7c1.2.3 4.8.9 4.3 3zm.5-5.4c-.5 1.9-3.4.9-4.4.7l.8-3.4c1 .2 4 .7 3.6 2.7z"/></svg></a><a href="#paypal" aria-label="PayPal"><svg viewBox="0 0 70 24" height="22" role="img" aria-label="PayPal"><text x="0" y="19" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="800" font-style="italic" letter-spacing="-1.4"><tspan fill="#123b72">Pay</tspan><tspan fill="#1688c9">Pal</tspan></text></svg></a></nav>
 </header>
 <main>
 <section class="hero" id="about">
@@ -100,7 +104,7 @@ footer{padding:24px 0 34px;text-align:center;color:var(--muted);font-size:12px}
 <p class="section-sub">На поддержку блога и новые проекты. Спасибо за твою поддержку!</p>
 <div class="payment-grid">
 <div class="panel">
-<div class="bank-brand"><img src="maib-logo.svg" alt="maib" width="30" height="30" style="width:30px;height:30px;object-fit:contain;border-radius:7px;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg style="display:none" class="maib-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#00a651"/><path d="M11 7.5 25.5 16 11 24.5z" fill="#fff"/></svg> MAIB</div>
+<div class="bank-brand"><img src="maib-logo.svg" alt="maib" height="40" style="height:40px;width:auto;max-width:150px;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg style="display:none" class="maib-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#00a651"/><path d="M11 7.5 25.5 16 11 24.5z" fill="#fff"/></svg> MAIB</div>
 <h3 id="card">Перевод на карту</h3>
 <p>Международная карта Mastercard</p>
 <div class="bank-card">
@@ -158,5 +162,14 @@ document.querySelectorAll('[data-copy]').forEach(function(b){
 });
 </script>
 <div class="copy-toast" id="copy-toast">Скопировано</div>
+<button class="to-top" id="to-top" type="button" aria-label="Наверх"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script>
+(function(){
+  var b=document.getElementById('to-top');
+  function t(){b.classList.toggle('show',(window.pageYOffset||document.documentElement.scrollTop)>200)}
+  window.addEventListener('scroll',t,{passive:true});t();
+  b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+})();
+</script>
 </body>
 </html>
