@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f6f1eb">
 <meta name="description" content="Поддержи IgnatovaHub — на поддержку блога и новые проекты.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 <title>Поддержать — ignatova.hub</title>
 <style>
 :root{--bg:#f6f1eb;--ink:#201d1a;--muted:#77716b;--paper:#fffdfa;--line:#e7ded5;--accent:#dce75b}
@@ -25,6 +26,10 @@ h1{font-size:clamp(48px,6.5vw,82px);line-height:.98;letter-spacing:-.065em;margi
 .hero-photo{height:480px;position:relative;overflow:hidden;border-radius:5px;background:linear-gradient(135deg,#f4c5d7,#e8a5c5 55%,#b56e98)}
 .hero-photo img{width:100%;height:100%;display:block;object-fit:cover}
 .photo-note{display:none;position:absolute;inset:auto 12px 12px;background:#fffdfacc;padding:8px 10px;font-size:11px;color:#5c5650}
+.order-text{font-family:"Playfair Display",Georgia,"Times New Roman",serif;font-style:italic;font-size:19px;line-height:1.55;color:#7b3fe4;margin:0 0 14px;max-width:460px}
+.order-tg{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#7b3fe4;font-weight:700;font-size:14px;border:1px solid #7b3fe4;border-radius:999px;padding:8px 16px 8px 10px}
+.order-tg svg{width:24px;height:24px;flex:none}
+.order-tg:hover{background:#7b3fe4;color:#fff}
 .section-title{font-size:clamp(32px,4vw,46px);letter-spacing:-.05em;margin:0 0 8px}
 .section-sub{color:var(--muted);margin:0 0 28px}
 .payments{padding:44px 0 66px;border-top:1px solid var(--line)}
@@ -84,12 +89,15 @@ footer{padding:24px 0 34px;text-align:center;color:var(--muted);font-size:12px}
 <div class="wrap">
 <header>
 <a class="logo" href="#">ignatova.hub</a>
-<nav class="nav-logos"><a href="#card" aria-label="Перевод на карту maib"><img src="maib-logo.svg" alt="maib" height="24" style="height:24px;width:auto;max-width:170px;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg style="display:none" viewBox="0 0 74 28" height="26" role="img" aria-label="maib"><g transform="scale(.875)"><circle cx="16" cy="16" r="16" fill="#00a651"/><path d="M11 7.5 25.5 16 11 24.5z" fill="#fff"/></g><text x="33" y="20" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="800" fill="#00a651" letter-spacing="-.5">maib</text></svg></a><a href="#crypto" aria-label="Криптовалюта"><svg viewBox="0 0 32 32" height="26" role="img" aria-label="Bitcoin"><circle cx="16" cy="16" r="16" fill="#f7931a"/><path fill="#fff" d="M22.5 14c.3-2.1-1.3-3.2-3.5-4l.7-2.8-1.7-.4-.7 2.7-1.4-.3.7-2.7-1.7-.4-.7 2.8-1.1-.3-2.3-.6-.5 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.3.2.1-.2 0-1.2 4.6c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.6 1.2.3-.7 2.8 1.7.4.7-2.8 1.4.4-.7 2.8 1.7.4.7-2.8c2.9.5 5.1.3 6-2.3.7-2.1 0-3.3-1.5-4.1 1.1-.3 1.9-1 2.1-2.5zm-3.9 5.4c-.5 2.1-4.1 1-5.2.7l.9-3.7c1.2.3 4.8.9 4.3 3zm.5-5.4c-.5 1.9-3.4.9-4.4.7l.8-3.4c1 .2 4 .7 3.6 2.7z"/></svg></a><a href="#paypal" aria-label="PayPal"><svg viewBox="0 0 70 24" height="22" role="img" aria-label="PayPal"><text x="0" y="19" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="800" font-style="italic" letter-spacing="-1.4"><tspan fill="#123b72">Pay</tspan><tspan fill="#1688c9">Pal</tspan></text></svg></a></nav>
+<nav class="nav-logos"><a href="#card" aria-label="Перевод на карту maib"><img src="maib-logo.svg" alt="maib" height="46" style="height:46px;width:auto;max-width:170px;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg style="display:none" viewBox="0 0 74 28" height="26" role="img" aria-label="maib"><g transform="scale(.875)"><circle cx="16" cy="16" r="16" fill="#00a651"/><path d="M11 7.5 25.5 16 11 24.5z" fill="#fff"/></g><text x="33" y="20" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="800" fill="#00a651" letter-spacing="-.5">maib</text></svg></a><a href="#crypto" aria-label="Криптовалюта"><svg viewBox="0 0 32 32" height="26" role="img" aria-label="Bitcoin"><circle cx="16" cy="16" r="16" fill="#f7931a"/><path fill="#fff" d="M22.5 14c.3-2.1-1.3-3.2-3.5-4l.7-2.8-1.7-.4-.7 2.7-1.4-.3.7-2.7-1.7-.4-.7 2.8-1.1-.3-2.3-.6-.5 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.3.2.1-.2 0-1.2 4.6c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.6 1.2.3-.7 2.8 1.7.4.7-2.8 1.4.4-.7 2.8 1.7.4.7-2.8c2.9.5 5.1.3 6-2.3.7-2.1 0-3.3-1.5-4.1 1.1-.3 1.9-1 2.1-2.5zm-3.9 5.4c-.5 2.1-4.1 1-5.2.7l.9-3.7c1.2.3 4.8.9 4.3 3zm.5-5.4c-.5 1.9-3.4.9-4.4.7l.8-3.4c1 .2 4 .7 3.6 2.7z"/></svg></a><a href="#paypal" aria-label="PayPal"><svg viewBox="0 0 70 24" height="22" role="img" aria-label="PayPal"><text x="0" y="19" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="800" font-style="italic" letter-spacing="-1.4"><tspan fill="#123b72">Pay</tspan><tspan fill="#1688c9">Pal</tspan></text></svg></a></nav>
 </header>
 <main>
 <section class="hero" id="about">
 <div>
-<div class="kicker">МОТОЦИКЛЫ / АВТО / ПУТЕШЕСТВИЯ</div>
+<div class="order-block">
+<p class="order-text">Ищете что-то особенное? Вы можете заказать видео по личному сценарию или приобрести эксклюзивный, осязаемый контент. Ваши идеи — моё исполнение. Пишите, всё обсуждаемо. (Не 18+)</p>
+<a class="order-tg" href="https://t.me/ignatova_manager" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.7 3.4 18.5 20c-.2 1.2-.9 1.5-1.9.9l-5.3-3.9-2.6 2.5c-.3.3-.6.6-1.2.6l.4-5.4 9.8-8.9c.4-.4-.1-.6-.6-.2L5 13.2.1 11.7c-1.1-.4-1.1-1.1.2-1.6L19.5 2.7c.9-.3 1.8.2 2.2.7z"/></svg><span>@ignatova_manager</span></a>
+</div>
 <h1>Поддержи<br>мой блог.</h1>
 <p class="intro">Твой донат помогает снимать больше крутого контента, развивать канал и делать ещё больше интересных проектов.</p>
 <div class="thanks">Спасибо! ♡</div>
@@ -101,7 +109,7 @@ footer{padding:24px 0 34px;text-align:center;color:var(--muted);font-size:12px}
 </section>
 <section class="payments" id="support">
 <h2 class="section-title">Как поддержать?</h2>
-<p class="section-sub">Перевод на карту, PayPal, или донат в криптовалюте!</p>
+<p class="section-sub">На поддержку блога и новые проекты. Спасибо за твою поддержку!</p>
 <div class="payment-grid">
 <div class="panel">
 <div class="bank-brand"><img src="maib-logo.svg" alt="maib" height="40" style="height:40px;width:auto;max-width:150px;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg style="display:none" class="maib-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#00a651"/><path d="M11 7.5 25.5 16 11 24.5z" fill="#fff"/></svg> MAIB</div>
